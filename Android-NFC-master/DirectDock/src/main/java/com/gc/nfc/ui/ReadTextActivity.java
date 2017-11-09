@@ -3,7 +3,6 @@ package com.gc.nfc.ui;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Color;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
@@ -49,8 +48,8 @@ public class ReadTextActivity extends BaseNfcActivity {
         mTvHealth = (TextView)findViewById(R.id.tv_health);
         mTvTechnology = (TextView)findViewById(R.id.tv_technology);
 
-        this.registerReceiver(this.mBatteryReceiver, new IntentFilter(
-                Intent.ACTION_BATTERY_CHANGED));
+//        this.registerReceiver(this.mBatteryReceiver, new IntentFilter(
+//                Intent.ACTION_BATTERY_CHANGED));
     }
 
     @Override
