@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gc.nfc">
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 要求当前设备必须要有NFC芯片 -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- <activity android:name=".MainActivity"> -->
+        <activity
+            android:name=".ui.ReadTextActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.RunAppActivity"
+            android:label="@string/str_run_app"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.RunUrlActivity"
+            android:label="@string/str_run_url"
+            android:launchMode="singleTop" />
+        <!--
+            <activity android:name=".ui.ReadTextActivity"
+            android:launchMode="singleTop"
+            android:label="@string/str_read_text"/>
+        -->
+        <activity
+            android:name=".ui.WriteTextActivity"
+            android:label="@string/str_write_text"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.ReadUriActivity"
+            android:label="@string/str_read_uri"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.WriteUriActivity"
+            android:label="@string/str_write_uri"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.ReadMUActivity"
+            android:label="@string/str_read_mu"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.WriteMUActivity"
+            android:label="@string/str_write_mu"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.WebDirectActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_web_direct"
+            android:theme="@style/FullscreenTheme"></activity>
+    </application>
+
+</manifest>
